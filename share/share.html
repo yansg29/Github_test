@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bdsharebuttonbox a{
+            margin: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="bdsharebuttonbox" data-tag="share_1">
+        <a class="bds_weixin" data-cmd="weixin" style="background: url('icon/分享/drawable-xhdpi/icon_wx.png') no-repeat 0 0;background-size: 100% 100%"></a>
+        <a class="bds_qzone" data-cmd="qzone" style="background: url('icon/分享/drawable-xhdpi/icon_kj.png') no-repeat 0 0;background-size: 100% 100%" href="javascript:"></a>
+        <a class="bds_tsina" data-cmd="tsina" style="background: url('icon/分享/drawable-xhdpi/icon_xl.png') no-repeat 0 0;background-size: 100% 100%"></a>
+        <a class="bds_weixin" data-cmd="weixin" style="background: url('icon/分享/drawable-xhdpi/icon_yq.png') no-repeat 0 0;background-size: 100% 100%" title="分享到朋友圈"></a>
+        <a class="bds_sqq" data-cmd="sqq" style="background: url('icon/分享/drawable-xhdpi/icon_qq.png') no-repeat 0 0;background-size: 100% 100%"></a>
+        <a class="bds_copy" data-cmd="copy" style="background: url('icon/分享/drawable-xhdpi/share_icon_1.png') no-repeat 8px 8px;background-size: 50% 50%"></a>
+    </div>
+    <script>
+
+//        var href =window.location.href;
+//        var url = href.split(",");
+//        console.log(url)
+
+        var  request_url=request.getHeader("Referer")
+        window._bd_share_config = {
+            common : {
+                bdText : '自定义分享内容',
+                bdDesc : '自定义分享摘要',
+                bdUrl : '',
+//                bdPic : '自定义分享图片'
+            },
+            share : [{
+                "bdSize" : 32,
+                "tag" : "share_1"
+            }],
+            slide : [{
+                bdImg : 0,
+                bdPos : "left",
+                bdTop : 100
+            }]
+        }
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+</body>
+</html>
